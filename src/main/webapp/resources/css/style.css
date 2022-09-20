@@ -1,25 +1,306 @@
-body{
-	
-	height:2000px;
-	margin: 0cm;
-	text-align:center;
-	font-family: 'Poppins', sans-serif;
+:root{
+
+    --color-blue: #87a5ff;
+    --color-blue-hover: blue;
+    --color-yellow: #ffc107;
+    --color-yellow-hover: #f3b90b;
 
 }
 
-.cats{
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+
+}
+
+.links{
+
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+
+}
+
+/*NAVBAR*/
+
+.navbar{
+
+    background-color: var(--color-yellow);
+    width: 80%;
+    height: 70px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;  
+
+}
+
+.navbar ul{
+
+    list-style: none;
+    display: flex;
+    margin-left: 0.5rem;
+
+}
+
+.navbar ul li{
+
+    margin: 0.50rem;
+    position: relative;
+
+}
+
+.navbar ul a:hover, .user-register a:hover{
+
+    color: var(--color-blue);
+    transition: 0.3s;
+
+}
+
+.dropdown{
+
+    display: none;
+
+}
+
+.navbar ul li:hover .dropdown{
+
+    display: block;
+    position: absolute;
+    background-color: var(--color-yellow);
+    left: 0;
+    top: 100%;  
+}
+
+.navbar ul li:hover .dropdown ul{
+
+    display: block;
+    
+}
+
+.user-register{
+    display: flex;
+    align-items: center;
+
+}
+
+input[type=text]{
+
+    width: 240px;
+    padding: 8px;
+    margin: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+}
+
+input[type=submit]{
+
+    color: white;
+	background-color: var(--color-blue);
+    padding: 8px;
+    margin-right: 8px;
+    border: none;
+	border-radius: 4px;
+    font-size: 18px;
+
+}
+
+input[type=submit]:hover {
+    background-color: blue;
+}
+
+/*CATS PLAYING IMAGE*/
+
+.cats img{
 	
-	width: 100%;
-	height: 550px;
-	background-image: url('../imgs/Cats.jpg');
-	background-size: cover;
+	width: 80%;
+	height: 600px;
 	background-position: center;
-	margin-bottom: 30px;
-	padding-bottom: 30px;
+	object-fit: cover;
 	display: flex;
 	flex-direction:column;
-	align-items: center;
-	justify-content: flex-end;
-	color: white;
+    margin: auto;
+    font-size: 30px;
 	
 }
+
+
+/*PRODUCTS SECTION*/
+
+section > h2{
+
+    padding-top: 4vh;
+    color: black;
+    font-size: 40px;
+
+}
+
+.product-stripe{
+	
+    width: 80%;
+	overflow-x: scroll;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+    margin: 0 auto;
+
+	
+}
+
+.stripe-container{ 
+	
+	display:flex; 
+    justify-content: center;
+    margin-left: 8rem;
+	
+} 
+
+.container{
+
+    max-width: 250px;
+    min-width: 250px;
+    margin-top: 5vh;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 12px;
+    transition: 0.3s;
+
+}
+
+.container:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+.card{
+
+    background-color: white;
+    padding: 8px;
+    border-radius: 12px;
+    border: 1px solid rgb(177, 176, 176);
+
+
+}
+.card img{
+
+    width: 100%;
+    border-radius: 12px;
+    height: 350px;
+    object-fit: cover;
+}
+
+.card > h2, h5, p{
+
+    margin: 1rem;
+    text-align: center;
+
+}
+
+.price{
+    color: grey;
+    font-size: 18px;
+}
+
+.icons{
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.icons img{
+
+    background-color: var(--color-yellow);
+    width: 30px;
+    height: 30px;
+    padding: .5rem 1.2rem;
+    border-radius: 4px;
+    margin-bottom: .5rem;
+
+}
+
+.icons img:hover{
+
+    background-color: var(--color-yellow-hover);
+
+}
+
+/*FOOTER*/
+
+.container-footer{
+
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+
+
+}
+
+.info{
+	
+	margin-left: 18rem;
+}
+
+
+.social-links ion-icon {
+
+    width: 50px;
+    height: 50px;
+    color: var(--color-blue);
+    padding: 1rem;
+}
+
+.social-links ion-icon:hover{
+
+    color: var(--color-blue-hover);
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
